@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(99, 136, 209);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">LAURA SAMARITA WILL YOU BE MY VALENTINE?? :D</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://tenor.com/view/cat-gif-18528539.gif" alt="Cute cat">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">YES BABY</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">AYAW</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "page1.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
